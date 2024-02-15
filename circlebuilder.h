@@ -4,8 +4,10 @@
 #include <QBrush>
 #include <QGraphicsEllipseItem>
 
+#include "IFigureBuilder.h"
 
-class CircleBuilder
+
+class CircleBuilder : public IFigureBuilder
 {
 private:
     QGraphicsEllipseItem* circle;
@@ -19,9 +21,9 @@ public:
     CircleBuilder();
     ~CircleBuilder();
 
-    void setColor(QBrush brush);
-    void setDiameter(int diameter);
-    QGraphicsEllipseItem* draw();
+    void setColor(QBrush brush) override;
+    void setSize(int size) override;
+    QGraphicsEllipseItem* draw() override;
 };
 
 #endif // CIRCLEBUILDER_H

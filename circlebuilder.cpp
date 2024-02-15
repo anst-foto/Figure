@@ -15,9 +15,9 @@ void CircleBuilder::setColor(QBrush brush)
     circle->setBrush(brush);
 }
 
-void CircleBuilder::setDiameter(int diameter)
+void CircleBuilder::setSize(int size)
 {
-    circle->setRect(X, Y, diameter, diameter);
+    circle->setRect(X, Y, size, size);
 }
 
 QGraphicsEllipseItem *CircleBuilder::draw()

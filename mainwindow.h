@@ -4,7 +4,7 @@
 #include <QMainWindow>
 #include <QGraphicsScene>
 
-#include "circlebuilder.h"
+#include "IFigureBuilder.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -24,11 +24,12 @@ private:
     Ui::MainWindow *ui;
     QGraphicsScene* scene;
 
-    CircleBuilder* circleBuilder;
+    IFigureBuilder* figureBuilder;
 
 private slots:
+    void changeFigure(QString figure);
     void changeColor(QString color);
-    void inputDiameter(int diameter);
+    void inputSize(int size);
     void draw();
 };
 #endif // MAINWINDOW_H

@@ -28,7 +28,7 @@
     <property name="geometry">
      <rect>
       <x>570</x>
-      <y>10</y>
+      <y>40</y>
       <width>221</width>
       <height>121</height>
      </rect>
@@ -72,14 +72,14 @@
      <item>
       <layout class="QVBoxLayout" name="verticalLayout_3">
        <item>
-        <widget class="QLabel" name="label_2">
+        <widget class="QLabel" name="labelSize">
          <property name="text">
           <string>Diameter</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QSpinBox" name="inputDeameter"/>
+        <widget class="QSpinBox" name="inputSize"/>
        </item>
       </layout>
      </item>
@@ -89,7 +89,7 @@
     <property name="geometry">
      <rect>
       <x>580</x>
-      <y>140</y>
+      <y>170</y>
       <width>201</width>
       <height>61</height>
      </rect>
@@ -98,6 +98,26 @@
      <string>Draw</string>
     </property>
    </widget>
+   <widget class="QComboBox" name="comboBoxFigure">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>10</y>
+      <width>221</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>Circle</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Square</string>
+     </property>
+    </item>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -105,7 +125,7 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>22</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>
