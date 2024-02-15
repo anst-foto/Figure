@@ -12,9 +12,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     connect(ui->comboBoxColors, &QComboBox::currentTextChanged, this, &MainWindow::changeColor);
     connect(ui->inputDeameter, &QSpinBox::valueChanged, this, &MainWindow::inputDiameter);
-
-    scene->addItem(circleBuilder->draw());
-    ui->graphicsView->setScene(scene);
+    connect(ui->buttonDraw, &QPushButton::clicked, this, &MainWindow::draw);
 }
 
 MainWindow::~MainWindow()
@@ -43,4 +41,10 @@ void MainWindow::changeColor(QString color)
 void MainWindow::inputDiameter(int diameter)
 {
     circleBuilder->setDiameter(diameter);
+}
+
+void MainWindow::draw()
+{
+    scene->addItem(circleBuilder->draw());
+    ui->graphicsView->setScene(scene);
 }

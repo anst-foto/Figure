@@ -29,5 +29,6 @@ private:
 private slots:
     void changeColor(QString color);
     void inputDiameter(int diameter);
+    void draw();
 };
 #endif // MAINWINDOW_H

@@ -22,5 +22,15 @@ void CircleBuilder::setDiameter(int diameter)
 
 QGraphicsEllipseItem *CircleBuilder::draw()
 {
-    return circle;
+    return clone();
+}
+
+
+QGraphicsEllipseItem* CircleBuilder::clone()
+{
+    auto clone = new QGraphicsEllipseItem();
+    clone->setBrush(circle->brush());
+    clone->setRect(circle->rect());
+
+    return clone;
 }

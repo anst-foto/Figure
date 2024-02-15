@@ -13,6 +13,8 @@ private:
     const int X = 10;
     const int Y = 10;
 
+    QGraphicsEllipseItem* clone();
+
 public:
     CircleBuilder();
     ~CircleBuilder();
